@@ -1,0 +1,685 @@
+:root {
+  /* ===== Colores de marca (colección Figma, 17 + 2 agregadas) ===== */
+  --rosaclaro: #FFBCD5;
+  --rosamedio: #FE80A6;
+  --naranjacalido: #F8B04C;
+  --dorado: #FFD463;
+  --violetamedio: #4704AC;
+  --blancopuro: #FFFFFF;
+  --whatsapp: #25D366;
+  --grisoscuro: #222222;
+  --letramenu: #1A0343;
+  --cremarosa: #FFF5F8;
+  --letrah1: #3B0B79;
+  --letrah2: #E91E63;
+  --botonprim: #4A12B2;
+  --botonsec: #FF5287;
+  --malvacard: #F4EBFB;
+  --fondofooter: #F5E8F7;
+  --top: #3B0B79;
+  --grismora: #7C6E82;   /* agregada: usada en textos secundarios/muted */
+  --lineas: #EFE6EC;     /* agregada: para bordes/divisores futuros */
+
+  /* ===== Tipografía ===== */
+  --font-title: "Fraunces", serif;
+  --font-accent: "Agbalumo", cursive;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  /* ===== Sombras (actualizadas al nuevo violetamedio) ===== */
+  --shadow-soft: 0px 10px 28px #4704AC48;
+  --shadow-card: 0px 3px 14px #4704AC12;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CAMBIO: scroll suave para toda la navegación interna por anclas (#inicio, #categorias, #nosotros, #contacto, #escribenos) */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--letramenu);
+  overflow-x: hidden;
+}
+
+/* ===== Barra superior — Texto/Barra Superior (14px Medium, LH 120%) ===== */
+.topbar {
+  background: var(--top);
+  color: var(--blancopuro);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 24px;
+}
+
+.topbar-whatsapp {
+  color: var(--blancopuro);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 72px;
+}
+
+.nav-links {
+  align-items: center;
+  display: flex;
+  gap: clamp(16px, 4vw, 110px);
+  flex-wrap: wrap;
+}
+
+/* ===== Enlaces de navegación — Botón/Texto (16px Semibold, LH Auto) ===== */
+.nav-links a {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--letramenu);
+  text-decoration: none;
+}
+
+.btn-cta {
+  border: 1.5px solid var(--whatsapp);
+  color: var(--whatsapp) !important;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--letramenu);
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--blancopuro);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px;
+    box-shadow: var(--shadow-soft);
+    z-index: 50;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  background: var(--whatsapp);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blancopuro);
+  font-size: 26px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background-color: var(--cremarosa);
+  background-size: cover;
+  background-position: center;
+  padding: 60px 40px;
+}
+
+.hero-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-copy {
+  max-width: 550px;
+  flex: 1 1 320px;
+}
+
+.hero-card {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 490 / 260;
+  object-fit: cover;
+  border-radius: 36px;
+  display: block;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  flex: 1 1 280px;
+  display: flex;
+  align-items: center;
+}
+
+/* Título/H1 — Fraunces 48px Bold, LH 115% */
+.hero-copy h1 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.15;
+  color: var(--letramenu);
+  margin: 0 0 16px;
+}
+
+/* Título/Acento — Agbalumo 44px Regular, LH 115% */
+.hero-highlight {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 1.15;
+  color: var(--rosamedio);
+}
+
+/* Cuerpo/Base — Plus Jakarta Sans 16px Regular, LH 160% */
+.hero-copy p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--grismora);
+  margin: 0 0 28px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Botones — Botón/Texto (16px Semibold, LH Auto) */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  padding: 14px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color .2s ease, transform .15s ease;
+}
+
+.btn-primary {
+  background-color: var(--botonprim);
+  color: var(--blancopuro);
+}
+.btn-primary:hover {
+  background-color: var(--letrah1);
+  border-color: var(--letrah1);
+}
+
+.btn-whatsapp {
+  background-color: transparent;
+  color: var(--whatsapp);
+  border-color: var(--whatsapp);
+}
+.btn-whatsapp:hover {
+  background-color: var(--whatsapp);
+  color: var(--blancopuro);
+}
+
+/* ===== Categorías ===== */
+.categorias {
+  padding: 40px 96px;
+}
+
+.categorias_header {
+  padding-bottom: 20px;
+}
+
+/* Título/H2 — Fraunces 32px Semibold, LH 120% */
+.categorias__title {
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--letramenu);
+  margin: 0 0 32px 0;
+}
+
+.categorias__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.category-card {
+  flex: 1 1 450px;
+  max-width: 550px;
+  min-height: 410px;
+  background: var(--cremarosa);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-soft);
+}
+
+.category-card__images {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 190px;
+}
+
+
+
+.category-card__img {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Título/H3 — Fraunces 20px Semibold, LH 125% */
+.category-card__title {
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--letramenu);
+  margin: 0;
+}
+
+/* Cuerpo/Pequeño — Plus Jakarta Sans 14px Regular, LH 150% */
+.category-card__desc {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--grismora);
+  margin: 0;
+}
+
+/* Enlace/Pequeño — Plus Jakarta Sans 14px Semibold, LH 140% */
+.category-card__link {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--rosamedio);
+  margin-top: auto;
+}
+
+/* ===== NOSOTROS ===== */
+/* CAMBIO: sección nueva. Reutiliza las mismas variables de color, tipografía y
+   sombra que ya existían (--font-title, --letramenu, --grismora, --shadow-soft, etc.)
+   para que se vea integrada con el resto del sitio. */
+.nosotros {
+  padding: 60px 96px;
+  background: var(--cremarosa);
+}
+
+.nosotros__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Reutiliza el mismo estilo de título que "Explora nuestras categorías" */
+.nosotros__title {
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--letramenu);
+  margin: 0 0 32px 0;
+}
+
+.nosotros__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 48px;
+}
+
+.nosotros__photo-wrap {
+  flex: 1 1 380px;
+  max-width: 480px;
+}
+
+.nosotros__photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+  box-shadow: var(--shadow-soft);
+  background: var(--malvacard); /* color de fondo mientras no haya foto cargada */
+}
+
+.nosotros__text {
+  flex: 1 1 380px;
+}
+
+.nosotros__paragraph {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--grismora);
+  margin: 0 0 24px;
+}
+
+.nosotros__subtitle {
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--letramenu);
+  margin: 0 0 12px;
+}
+
+@media (max-width: 1024px) {
+  .nosotros {
+    padding: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nosotros {
+    padding: 40px 24px;
+  }
+  .nosotros__content {
+    flex-direction: column;
+  }
+}
+
+/* ===== TRUST BAR ===== */
+.trust-bar {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 32px 96px;
+  background: var(--malvacard);      /* antes: var(--blancopuro) */
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trust-item__icon {
+  font-size: 50px;
+  color: var(--violetamedio);        /* antes: var(--rosamedio) */
+}
+
+.trust-item__text {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--letramenu);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .categorias, .trust-bar {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .categorias__grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .category-card {
+    width: 100%;
+    max-width: 320px;
+  }
+  .trust-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 24px;
+  }
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--cremarosa);
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 60px 150px;
+}
+
+.footer-col {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-col--brand {
+  flex: 0 0 15%;
+}
+
+.footer-col--location {
+  flex: 0 0 25%;
+}
+
+.footer-col--form {
+  flex: 0 0 25%;
+}
+
+.footer-logo {
+  height: 100px;
+  width: auto;
+}
+
+.footer-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--grismora);
+  margin: 0;
+}
+
+.footer-heading {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--letramenu);
+  margin: 8px 0 0;
+}
+
+.footer-subheading {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--grismora);
+  margin: -8px 0 0;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--letramenu);
+  text-decoration: none; /* CAMBIO: para que el link de Instagram se vea igual que antes (sin subrayado) */
+}
+
+.footer-contact-item i {
+  font-size: 18px;
+  color: var(--violetamedio);
+}
+
+.footer-map {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--lineas);
+}
+
+.footer-map iframe {
+  display: block;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-form input,
+.footer-form textarea {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--letramenu);
+  background: var(--blancopuro);
+  border: 1px solid var(--lineas);
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+}
+
+.footer-form textarea {
+  resize: none;
+  height: 70px;
+}
+
+.footer-form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--letramenu);
+}
+
+.footer-form-hint {
+  font-size: 11px;
+  color: var(--grismora);
+  margin-top: -6px;
+}
+
+.footer-form-btn {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* CAMBIO: mensaje de confirmación mostrado tras enviar el formulario de "Escríbenos" */
+.footer-form-confirmation {
+  background: var(--blancopuro);
+  border: 1px solid var(--lineas);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-form-confirmation p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--letramenu);
+  margin: 0;
+}
+
+.footer-bottom {
+  background: var(--top);
+  padding: 16px 96px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--blancopuro);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .footer-main,
+  .footer-bottom {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    flex-direction: column;
+    padding: 40px 24px;
+  }
+  .footer-bottom {
+    padding: 16px 24px;
+    text-align: left;
+  }
+}
