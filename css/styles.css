@@ -96,26 +96,6 @@ body {
   text-decoration: none;
 }
 
-.btn-cta {
-  border: 1.5px solid var(--violetamedio);
-  color: var(--violetamedio) !important;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1;
-  padding: 8px 16px;
-  border-radius: 20px;
-}
-
-.btn-cta i {
-  display: none;
-}
-
-.btn-cta:hover {
-  background-color: var(--violetamedio);
-  color: var(--blancopuro) !important;
-}
-
 .hamburger {
   display: none;
   flex-direction: column;
@@ -173,7 +153,7 @@ body {
 
 /* ===== Hero ===== */
 .hero {
-  background-color: var(--cremarosa);
+  background-color: var(--rosaclaro);
   background-size: cover;
   background-position: center;
   padding: 60px 40px;
@@ -276,13 +256,12 @@ body {
 }
 
 .btn-whatsapp {
-  background-color: transparent;
-  color: var(--whatsapp);
+  background-color: var(--whatsapp);
+  color: var(--blancopuro);
   border-color: var(--whatsapp);
 }
 .btn-whatsapp:hover {
-  background-color: var(--whatsapp);
-  color: var(--blancopuro);
+  filter: brightness(0.92);
 }
 
 /* ===== Categorías ===== */
@@ -315,7 +294,7 @@ body {
 .category-card {
   flex: 1 1 450px;
   max-width: 550px;
-  min-height: 410px;
+  min-height: 340px;
   background: var(--cremarosa);
   border-radius: 16px;
   padding: 24px;
@@ -338,7 +317,7 @@ body {
   display: flex;
   gap: 10px;
   width: 100%;
-  height: 190px;
+  height: 170px;
 }
 
 
@@ -387,7 +366,7 @@ body {
    para que se vea integrada con el resto del sitio. */
 .nosotros {
   padding: 60px 96px;
-  background: var(--cremarosa);
+  background: var(--rosaclaro);
 }
 
 .nosotros__inner {
@@ -478,20 +457,36 @@ body {
 .trust-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 .trust-item__icon {
-  font-size: 50px;
-  color: var(--violetamedio);        /* antes: var(--rosamedio) */
+  font-size: 36px;
+  color: var(--violetamedio);
 }
 
+/* CAMBIO: cada ítem ahora tiene título (negrita) + subtítulo (texto secundario),
+   en vez de una sola línea de texto */
 .trust-item__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trust-item__title {
   font-family: var(--font-body);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.3;
-  color: var(--letramenu);
+  color: var(--violetamedio);
+}
+
+.trust-item__subtitle {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--grismora);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -543,7 +538,7 @@ body {
 
 /* ===== FOOTER ===== */
 .footer {
-  background: var(--cremarosa);
+  background: var(--fondofooter);
 }
 
 .footer-main {
@@ -570,7 +565,7 @@ body {
   flex: 0 0 25%;
 }
 
-.footer-col--form {
+.footer-col--pasos {
   flex: 0 0 25%;
 }
 
@@ -625,62 +620,20 @@ body {
   display: block;
 }
 
-.footer-form {
+/* CAMBIO: "Cómo hacer tu pedido" reemplaza al formulario "Escríbenos" */
+.footer-steps {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.footer-form input,
-.footer-form textarea {
-  font-family: var(--font-body);
-  font-size: 13px;
-  color: var(--letramenu);
-  background: var(--blancopuro);
-  border: 1px solid var(--lineas);
-  border-radius: 8px;
-  padding: 10px 12px;
-  outline: none;
-}
-
-.footer-form textarea {
-  resize: none;
-  height: 70px;
-}
-
-.footer-form-label {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--letramenu);
-}
-
-.footer-form-hint {
-  font-size: 11px;
-  color: var(--grismora);
-  margin-top: -6px;
-}
-
-.footer-form-btn {
-  align-self: flex-start;
-  margin-top: 4px;
-}
-
-/* CAMBIO: mensaje de confirmación mostrado tras enviar el formulario de "Escríbenos" */
-.footer-form-confirmation {
-  background: var(--blancopuro);
-  border: 1px solid var(--lineas);
-  border-radius: 8px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.footer-form-confirmation p {
-  font-family: var(--font-body);
-  font-size: 14px;
-  color: var(--letramenu);
+  gap: 8px;
+  padding-left: 18px;
   margin: 0;
+}
+
+.footer-steps li {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--letramenu);
 }
 
 .footer-bottom {
@@ -716,7 +669,7 @@ body {
   }
   .footer-col--brand { grid-area: brand; }
   .footer-col--location { grid-area: location; }
-  .footer-col--form { grid-area: form; }
+  .footer-col--pasos { grid-area: form; }
   .footer-bottom {
     padding: 16px 24px;
     text-align: left;

@@ -1,6 +1,6 @@
 // 1. Mensajes que se alternan en la barra superior
 const mensajes = [
-  "Envios a todo Colombia 💛",
+  "Envíos a todo Colombia 💜",
   "Todo lo que necesitas para tu negocio 🧸"
 ];
 let indice = 0;
@@ -28,20 +28,3 @@ enlacesDelMenu.forEach((enlace) => {
     navLinks.classList.remove("active");
   });
 });
-
-// 4. Envio del formulario "Escribenos" (footer)
-// Por ahora no hay backend/correo real conectado: solo evitamos que la pagina
-// se recargue, mostramos el mensaje de confirmacion y limpiamos los campos.
-const footerForm = document.getElementById("footer-form");
-const footerFormConfirmation = document.getElementById("footer-form-confirmation");
-
-if (footerForm && footerFormConfirmation) {
-  footerForm.addEventListener("submit", (evento) => {
-    evento.preventDefault(); // evita que la pagina recargue
-
-    footerForm.hidden = true;
-    footerFormConfirmation.hidden = false;
-
-    footerForm.reset();
-  });
-}
