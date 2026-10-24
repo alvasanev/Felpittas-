@@ -4,16 +4,16 @@ const mensajes = [
   "Todo lo que necesitas para tu negocio 🧸"
 ];
 let indice = 0;
- 
+
 setInterval(() => {
   indice = (indice + 1) % mensajes.length;
   document.getElementById("topbar-msg").textContent = mensajes[indice];
 }, 4000);
- 
+
 // 2. Menu hamburguesa (mostrar/ocultar en movil)
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
- 
+
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
@@ -28,3 +28,6 @@ enlacesDelMenu.forEach((enlace) => {
     navLinks.classList.remove("active");
   });
 });
+
+// 4. Año actual en el pie de página (se actualiza solo cada año)
+document.getElementById("anio").textContent = new Date().getFullYear();

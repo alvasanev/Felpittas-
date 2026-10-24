@@ -1,182 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
 
-
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felpitta's — Detalles y regalos</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Fraunces:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felpitta's — Detalles y regalos</title>
+
+  <!-- Íconos Tabler: se dejan los dos enlaces originales (el primero trae camión y WhatsApp) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+
+  <!-- Fuentes: Fraunces (títulos, con cursiva) y Plus Jakarta Sans (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-
 <body>
-  
-<!-- Barra superior -->
+
+<!-- ===== BARRA SUPERIOR ===== -->
 <div class="topbar">
   <span id="topbar-msg">Envíos a todo Colombia 💜</span>
-  <!-- CAMBIO: número de WhatsApp actualizado a +57 300 214 9814 (confirmado por el cliente)
-       TODO: mensaje predefinido con Lorem Ipsum temporal, reemplázalo por el texto real -->
+  <!-- TODO: mensaje predefinido con Lorem Ipsum temporal, reemplázalo por el texto real -->
   <a href="https://wa.me/573178155239?text=Lorem%20ipsum%20dolor%20sit%20amet" class="topbar-whatsapp" target="_blank" rel="noopener">
     <i class="ti ti-brand-whatsapp"></i> Escríbenos por WhatsApp
   </a>
 </div>
 
-<!-- Encabezado principal -->
+<!-- ===== ENCABEZADO (navegación) ===== -->
 <header class="nav">
   <a href="#inicio">
     <img src="./img/A1logo-felpittas.png" alt="Felpitta's" class="logo">
   </a>
- 
+
   <nav class="nav-links" id="nav-links">
     <a href="#inicio">Inicio</a>
     <a href="#categorias">Categorías</a>
     <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
   </nav>
- 
+
   <button class="hamburger" id="hamburger" aria-label="Abrir menú">
     <span></span><span></span><span></span>
   </button>
- 
-  <!-- CAMBIO: número de WhatsApp actualizado a +57 300 214 9814 -->
+
+  <!-- Botón flotante de WhatsApp: se deja intacto -->
   <!-- TODO: mensaje predefinido con Lorem Ipsum temporal, reemplázalo por el texto real -->
   <a href="https://wa.me/573178155239?text=Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipiscing" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
     <i class="ti ti-brand-whatsapp"></i>
   </a>
 </header>
 
+<!-- ===== HERO ===== -->
 <section class="hero" id="inicio">
   <div class="hero-inner">
 
     <div class="hero-copy">
-      <h1>Detalles<br><span class="hero-highlight">que hablan por ti</span></h1>
+      <h1>
+        <span class="hero-title-1">Detalles</span>
+        <span class="hero-highlight">que hablan por ti</span>
+      </h1>
       <p>Peluches, artículos kawaii y detalles diseñados para crear momentos inolvidables.</p>
       <div class="hero-actions">
-        <a href="#categorias" class="btn btn-primary">Ver catálogo</a>
-        <!-- CAMBIO: número de WhatsApp actualizado a +57 300 214 9814
-             TODO: mensaje predefinido con Lorem Ipsum temporal, reemplázalo por el texto real -->
+        <a href="#categorias" class="btn btn-primary">Ver categorías</a>
+        <!-- TODO: mensaje predefinido con Lorem Ipsum temporal, reemplázalo por el texto real -->
         <a href="https://wa.me/573178155239?text=Lorem%20ipsum%20dolor%20sit%20amet%20consectetur" class="btn btn-whatsapp" target="_blank" rel="noopener">
-          <i class="ti ti-brand-whatsapp"></i> Pedir por WhatsApp
+          Pedir por WhatsApp
         </a>
       </div>
     </div>
 
     <div class="hero-visual">
-      <!-- TODO: falta la foto nueva del encabezado (pendiente de Felpitta's, ver Informe Ejecutivo 22 sep) -->
-      <img src="./img/banner gris.JPG" alt="Caja de regalo Felpitta's" class="hero-card">
+      <!-- TODO: falta la foto nueva del encabezado (pendiente de Felpitta's) -->
+      <img src="./img/banner gris.JPG" alt="Tienda Felpitta's con peluches y artículos kawaii" class="hero-card">
     </div>
 
   </div>
 </section>
 
-<!-- ===== CATEGORÍAS ===== --> 
-
+<!-- ===== CATEGORÍAS ===== -->
 <section class="categorias" id="categorias">
-  <div class="categorias_header">
-    <h2 class="categorias__title">Explora nuestras categorías</h2>
-  </div>
+  <div class="categorias__inner">
+    <div class="categorias_header">
+      <h2 class="categorias__title">Explora nuestras categorías</h2>
+      <!-- Pluma dorada junto al título: archivo img/decor/pluma.png -->
+      <img src="./img/decor/colibri.png" alt="" class="deco-pluma deco-pluma--titulo">
+    </div>
 
-  <div class="categorias__grid">
+    <div class="categorias__grid">
 
+      <!-- TODO: falta el link real del catálogo de Canva para "Artículos Kawaii" -->
+      <a href="https://www.canva.com/design/DAGuFVvpByY/6KvoEcIB7lp1E4TjUh8GhQ/view?utm_content=DAGuFVvpByY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3a750b64b1" target="_blank" rel="noopener" class="category-card">
+        <div class="category-card__images">
+          <img src="./img/1_Kawaii/Kawaii%201.jpg" alt="Artículos kawaii, foto 1" class="category-card__img">
+          <img src="./img/1_Kawaii/kawaii%202.jpg" alt="Artículos kawaii, foto 2" class="category-card__img">
+        </div>
+        <h3 class="category-card__title">Artículos Kawaii</h3>
+        <p class="category-card__desc">Detalles especiales para cada momento. 💕</p>
+        <span class="category-card__link">Ver catálogo →</span>
+      </a>
 
+      <!-- TODO: falta el link real del catálogo de Canva para "Empaques" -->
+      <a href="https://www.canva.com/design/DAGvxXIExi0/a1dL93nVdspAJSmJx8bJlA/view?utm_content=DAGvxXIExi0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h55c49ebde0" target="_blank" rel="noopener" class="category-card">
+        <div class="category-card__images">
+          <img src="./img/2_Empaques/empaques%201.jpg" alt="Empaques para regalo, foto 1" class="category-card__img">
+          <img src="./img/2_Empaques/empaques%202.jpg" alt="Empaques para regalo, foto 2" class="category-card__img">
+        </div>
+        <h3 class="category-card__title">Empaques</h3>
+        <p class="category-card__desc">La magia de un regalo empieza antes de abrirlo. 🎀</p>
+        <span class="category-card__link">Ver catálogo →</span>
+      </a>
 
-    <!-- TODO: falta el link real del catálogo de Canva para "Artículos Kawaii" -->
-    <a href="#" target="_blank" rel="noopener" class="category-card">
-      <div class="category-card__images">
-        <img src="./img/Categoria_1/Hello_kitty.jpeg" alt="Hello_kitty" class="category-card__img">
-        <img src="./img/Categoria_1/Stitch.jpeg" alt="Stitch" class="category-card__img">
-      </div>
-      <h3 class="category-card__title">Artículos Kawaii</h3>
-      <p class="category-card__desc">Detalles especiales para cada momento. 💕</p>
-      <span class="category-card__link">Ver catálogo</span>
-    </a> 
+      <!-- TODO: falta el link real del catálogo de Canva para "Felpudos Tiernos" -->
+      <a href="https://www.canva.com/design/DAG0Ztr2tVo/0uMxLQS_-bHRkiebLLF-uw/view?utm_content=DAG0Ztr2tVo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb490710101" target="_blank" rel="noopener" class="category-card">
+        <div class="category-card__images">
+          <img src="./img/3_Felpudos/felpudos%201.jpg" alt="Felpudos tiernos, foto 1" class="category-card__img">
+          <img src="./img/3_Felpudos/felpudos%202.jpg" alt="Felpudos tiernos, foto 2" class="category-card__img">
+        </div>
+        <h3 class="category-card__title">Felpudos Tiernos</h3>
+        <p class="category-card__desc">Personalidad y ternura en cada detalle. 🧸</p>
+        <span class="category-card__link">Ver catálogo →</span>
+      </a>
 
+      <!-- TODO: falta el link real del catálogo de Canva para "Tarjetería" -->
+      <a href="https://www.canva.com/design/DAHYdRoDwZ8/-OJbKexNX-TQAZr04z2vnw/view?utm_content=DAHYdRoDwZ8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb03e33bae8" target="_blank" rel="noopener" class="category-card">
+        <div class="category-card__images">
+          <img src="./img/4_Tarjetas/tarjetas%201.jpg" alt="Tarjetería, foto 1" class="category-card__img">
+          <img src="./img/4_Tarjetas/tarjetas%202%20.jpeg" alt="Tarjetería, foto 2" class="category-card__img">
+        </div>
+        <h3 class="category-card__title">Tarjetería</h3>
+        <p class="category-card__desc">Mensajes perfectos para decir lo que sientes. 💌</p>
+        <span class="category-card__link">Ver catálogo →</span>
+      </a>
 
-
-    <!-- TODO: falta el link real del catálogo de Canva para "Empaques" -->
-    <a href="#" target="_blank" rel="noopener" class="category-card">
-      <div class="category-card__images">
-        <img src="./img/Categoria_2/floristería.jpeg" alt="Bolsa de regalo" class="category-card__img">
-        <img src="./img/Categoria_2/floristería.jpeg" alt="Caja de regalo" class="category-card__img">
-      </div>
-      <h3 class="category-card__title">Empaques</h3>
-      <p class="category-card__desc">La magia de un regalo empieza antes de abrirlo. 🎀</p>
-      <span class="category-card__link">Ver catálogo</span>
-    </a> 
-
-
-
-
-        <!-- TODO: falta el link real del catálogo de Canva para "Felpudos Tiernos" -->
-        <a href="#" target="_blank" rel="noopener" class="category-card">
-      <div class="category-card__images">
-        <img src="./img/Categoria_3/Spider-man.jpeg" alt="Peluche de personaje" class="category-card__img">
-        <img src="./img/Categoria_3/Spider-man.jpeg" alt="Peluche clásico" class="category-card__img">
-      </div>
-      <h3 class="category-card__title">Felpudos Tiernos</h3>
-      <p class="category-card__desc">Personalidad y ternura en cada detalle. 🧸</p>
-      <span class="category-card__link">Ver catálogo</span>
-    </a>
-
-
-    <!-- TODO: falta el link real del catálogo de Canva para "Tarjetería" -->
-    <a href="#" target="_blank" rel="noopener" class="category-card">
-      <div class="category-card__images">
-        <img src="./img/Categoria_4/globos.jpeg" alt="Tarjeta de cumpleaños" class="category-card__img">
-        <img src="./img/Categoria_4/globos.jpeg" alt="Tarjeta de temporada" class="category-card__img">
-      </div>
-      <h3 class="category-card__title">Tarjetería</h3>
-      <p class="category-card__desc">Mensajes perfectos para decir lo que sientes. 💌</p>
-      <span class="category-card__link">Ver catálogo</span>
-    </a>
-
-
-
-    <!-- TODO: falta el link real del catálogo de Canva para "Floristería" -->
-    <a href="#" target="_blank" rel="noopener" class="category-card">
-      <div class="category-card__images">
-        <img src="./img/Categoria_5/Oveja.jpeg" alt="Papel coreano" class="category-card__img">
-        <img src="./img/Categoria_5/Oveja.jpeg" alt="Pines decorativos" class="category-card__img">
-      </div>
-      <h3 class="category-card__title">Floristería</h3>
-      <p class="category-card__desc">Un toque especial para celebrar, sorprender y compartir. 🌻</p>
-      <span class="category-card__link">Ver catálogo</span>
-    </a>
-   </div>
-
-  </section>
-
-<!-- ===== NOSOTROS ===== -->
-<!-- CAMBIO: nueva sección "Nosotros" (una sola one-page, con scroll/ancla, según lo acordado).
-     Mantiene Topbar/Header/Footer intactos; solo se agrega este bloque de contenido. -->
-<section class="nosotros" id="nosotros">
-  <div class="nosotros__inner">
-    <h2 class="nosotros__title">Equipo Felpitta's</h2>
-
-    <div class="nosotros__content">
-
-      <div class="nosotros__photo-wrap">
-        <!-- ESPACIO PARA LA FOTO: el cliente sube manualmente la imagen del equipo.
-             Reemplaza el "src" de abajo por la ruta real, por ejemplo: ./img/Nosotros/equipo.jpg
-             TODO: pendientes 2 fotos nuevas (1 vertical y 1 horizontal), ver Informe Ejecutivo 22 sep -->
-        <img src="./img/Nosotros/equipo-felpittas.jpg" alt="Equipo de trabajo de Felpitta's" class="nosotros__photo">
-      </div>
-
-      <div class="nosotros__text">
-        <!-- CAMBIO: texto final confirmado (Informe Ejecutivo 22 sep), reemplaza el Lorem Ipsum -->
-        <p class="nosotros__paragraph">
-          Detrás de cada detalle hay 10 años de experiencia y un equipo que ama lo que hace. Elegimos
-          cada producto con cuidado y lo empacamos con la misma dedicación con la que lo entregaríamos
-          a un ser querido. En Felpitta's, nuestro equipo está capacitado para atender las necesidades
-          de tu negocio y entregarte tranquilidad en cada pedido, porque sabemos lo importante que es
-          entregar un regalo perfecto.
-        </p>
-      </div>
+      <!-- TODO: falta el link real del catálogo de Canva para "Floristería" -->
+      <a href="https://www.canva.com/design/DAHPkLbC7sk/HW0PhtbUrWZo7kPjkLJ-BA/view?utm_content=DAHPkLbC7sk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h88f21d49f3" target="_blank" rel="noopener" class="category-card">
+        <div class="category-card__images">
+          <img src="./img/5_Floristería/Floristería%201.jpg" alt="Floristería, foto 1" class="category-card__img">
+          <img src="./img/5_Floristería/Floristería%202.jpg" alt="Floristería, foto 2" class="category-card__img">
+        </div>
+        <h3 class="category-card__title">Floristería</h3>
+        <p class="category-card__desc">Un toque especial para celebrar, sorprender y compartir. 🌸</p>
+        <span class="category-card__link">Ver catálogo →</span>
+      </a>
 
     </div>
   </div>
@@ -201,8 +169,6 @@
     </div>
   </div>
 
-  <!-- CAMBIO: se reemplazó "Atención personalizada" por "Somos Mayoristas", a solicitud
-       de la dueña, para dejar claro que el negocio vende al por mayor -->
   <div class="trust-item">
     <i class="ti ti-building-warehouse trust-item__icon"></i>
     <div class="trust-item__text">
@@ -220,60 +186,73 @@
   </div>
 
 </section>
-<br>
-<!-- ===== FOOTER ===== -->
-<!-- CAMBIO: se agregó id="contacto" para que el enlace "Contacto" del menú haga scroll aquí,
-     ya que esta sección contiene la información de contacto y ubicación -->
-<footer class="footer" id="contacto">
-  <div class="footer-main">
 
-    <div class="footer-col footer-col--brand">
-      <img src="./img/A1logo-felpittas.png" alt="Felpitta's" class="footer-logo">
-      <p class="footer-desc">Peluches y regalos con detalles que hablan por ti</p>
+<!-- ===== NOSOTROS ===== -->
+<section class="nosotros" id="nosotros">
+  <div class="nosotros__inner">
 
-      <h4 class="footer-heading">Contáctanos</h4>
-      
-      <div class="footer-contact-item">
-        <i class="ti ti-brand-whatsapp"></i>
-        <span>+57 317 815 5239</span>
+    <div class="nosotros__photo-wrap">
+      <!-- Colibrí con dos arcos de vuelo (los arcos van dibujados aquí; el colibrí es img/decor/colibri.png) -->
+      <div class="deco-vuelo" aria-hidden="true">
+        <img src="./img/decor/colibri.png" alt="" class="deco-colibri deco-colibri--nosotros">
+        <svg class="deco-arcos" viewBox="0 0 60 60" fill="none" stroke="#3B0B79" stroke-width="2.5" stroke-linecap="round">
+          <path d="M26.9 12.3 A18 18 0 0 1 45.6 21"/>
+          <path d="M25.5 4.4 A26 26 0 0 1 52.5 17"/>
+        </svg>
       </div>
-      <!-- CAMBIO: se quitó el enlace de Instagram a solicitud de la dueña, ya que la
-           empresa no está activa en esa red hace tiempo -->
+      <!-- TODO: pendientes 2 fotos nuevas (1 vertical y 1 horizontal) -->
+      <img src="./img/Nosotros/equipo-felpittas.jpg" alt="Equipo de trabajo de Felpitta's" class="nosotros__photo">
     </div>
 
-   <div class="footer-col footer-col--location">
-  <h4 class="footer-heading">Ubicación</h4>
-  <p class="footer-subheading">Carrera 48 # 63-38, Barrio La Floresta, Bucaramanga</p>
-  <div class="footer-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5237.640750470875!2d-73.10763882389729!3d7.107273292896183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f1471d17f1b%3A0x3a2734703dcca7c5!2sFelpitta's!5e1!3m2!1ses-419!2sco!4v1788395369994!5m2!1ses-419!2sco" 
-    width="100%" height="270" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade"
-    title="Ubicación Felpitta's">></iframe>
-   
-  </div>
-</div>
+    <div class="nosotros__text">
+      <h2 class="nosotros__title">Nosotros</h2>
+      <p class="nosotros__paragraph">
+        Detrás de cada detalle hay 10 años de experiencia y un equipo que ama lo que hace. Elegimos
+        cada producto con cuidado y lo empacamos con la misma dedicación con la que lo entregaríamos
+        a un ser querido. En Felpitta's, nuestro equipo está capacitado para atender las necesidades
+        de tu negocio y entregarte tranquilidad en cada pedido, porque sabemos lo importante que es
+        entregar un regalo perfecto.
+      </p>
+    </div>
 
-    <!-- CAMBIO: se quitó el formulario "Escríbenos" a solicitud de la dueña (todo el
-         contacto se maneja por WhatsApp); en su lugar va un texto informativo con los
-         pasos para comprar, para resolver de una vez las dudas más comunes -->
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="contacto">
+
+  <!-- Franja rosa que suaviza la transición hacia el footer -->
+  <div class="footer-strip" aria-hidden="true"></div>
+
+  <div class="footer-main">
+
+    <div class="footer-col footer-col--location">
+      <h4 class="footer-heading"><i class="ti ti-map-pin"></i> Ubicación</h4>
+      <p class="footer-address">
+        Carrera 48 # 63-38<br>
+        Barrio La Floresta<br>
+        Bucaramanga
+      </p>
+      <!-- TODO: reemplaza este enlace por el link real de Google Maps (botón Compartir > Copiar vínculo) -->
+      <a href="https://maps.app.goo.gl/y13ivdyz9oC4jfcA9" class="footer-link" target="_blank" rel="noopener">Ver ubicación en Google Maps →</a>
+    </div>
+
     <div class="footer-col footer-col--pasos">
-      <h4 class="footer-heading">Cómo hacer tu pedido</h4>
+      <h4 class="footer-heading"><i class="ti ti-shopping-bag"></i> Cómo hacer tu pedido</h4>
       <ol class="footer-steps">
         <li>Explora el catálogo</li>
         <li>Escríbenos por WhatsApp</li>
-        <li>Paga por Bancolombia o Nequi y envía el comprobante</li>
+        <li>Paga por Bancolombia o Nequi enviando el comprobante</li>
       </ol>
     </div>
 
   </div>
 
   <div class="footer-bottom">
-    <p>© 2026 Felpitta's — Todos los derechos reservados</p>
+    <p>© <span id="anio">2026</span> Felpitta's — Todos los derechos reservados</p>
   </div>
 </footer>
-  <script src="js/script.js"></script>
+
+<script src="js/script.js"></script>
 </body>
 </html>
