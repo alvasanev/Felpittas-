@@ -1,9 +1,8 @@
 :root {
-  /* ===== Colores de marca (colección "Colores de marca" de Figma) ===== */
   --rosaclaro: #FFBCD5;
   --rosamedio: #FE80A6;
   --dorado: #FFD463;
-  --doradopal: #FFF1C2;   /* nuevo: fondo izquierdo de Nosotros */
+  --doradopal: #FFF1C2;   
   --violetamedio: #4804AE;
   --blancopuro: #FFFFFF;
   --whatsapp: #25D366;
@@ -13,28 +12,21 @@
   --letrah1: #3B0B79;
   --letrah2: #E91E63;
   --lila: #EBDDF7;
-  --rosapal: #FFEBF2;     /* fondo derecho de Nosotros */
-  --rosali: #F6E0F2;      /* nuevo: fondo de Categorías */
-  --lilasub: #E3CFF3;     /* nuevo: fondo de la Trust Bar */
+  --rosapal: #FFEBF2;    
+  --rosali: #F6E0F2;     
+  --lilasub: #E3CFF3;     
   --grismora: #7C6E82;
   --lineas: #EFE6EC;
 
-  /* Degradado del Hero (solo se usa ahí, no son variables de Figma) */
   --hero-inicio: #410D8C;
   --hero-fin: #C568B6;
 
-  /* ===== Tipografía ===== */
   --font-title: "Fraunces", serif;
   --font-body: "Plus Jakarta Sans", sans-serif;
 
-  /* ===== Sombras ===== */
   --shadow-soft: 0px 10px 28px #4804AE48;
   --shadow-card: 0px 3px 14px #4804AE12;
 
-  /* ===== Tile de íconos (gift, heart, star, sparkles) =====
-     Es un patrón SVG dibujado en el propio CSS, sin archivos.
-     Para usar tu PNG de Figma en su lugar, en .categorias cambia
-     background-image por: url("../img/tile-iconos.png")  */
   --tile-iconos: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170' viewBox='0 0 170 170' fill='none' stroke='%23FE80A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.28'%3E%3Cg transform='translate(14 16) scale(1.2)'%3E%3Cpath d='M3 8m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z'/%3E%3Cpath d='M12 8l0 13'/%3E%3Cpath d='M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7'/%3E%3Cpath d='M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5'/%3E%3C/g%3E%3Cg transform='translate(98 30) scale(1.1) rotate(12 12 12)'%3E%3Cpath d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'/%3E%3C/g%3E%3Cg transform='translate(24 98) scale(1.1) rotate(-10 12 12)'%3E%3Cpath d='M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z'/%3E%3C/g%3E%3Cg transform='translate(104 104) scale(1.2)'%3E%3Cpath d='M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6'/%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -44,7 +36,6 @@
   box-sizing: border-box;
 }
 
-/* Scroll suave para la navegación interna (#inicio, #categorias, #nosotros, #contacto) */
 html {
   scroll-behavior: smooth;
 }
@@ -55,7 +46,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== Barra superior ===== */
 .topbar {
   background: var(--letramenu);
   color: var(--blancopuro);
@@ -64,17 +54,11 @@ body {
   font-size: 14px;
   line-height: 1.2;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; 
   align-items: center;
   padding: 6px 24px;
 }
 
-.topbar-note {
-  color: var(--blancopuro);
-  font-weight: 600;
-}
-
-/* ===== Encabezado ===== */
 .nav {
   background: var(--blancopuro);
   display: flex;
@@ -143,7 +127,6 @@ body {
   }
 }
 
-/* ===== Botón flotante de WhatsApp (sin cambios) ===== */
 .whatsapp-float {
   position: fixed;
   bottom: 24px;
@@ -161,7 +144,6 @@ body {
   z-index: 100;
 }
 
-/* ===== Hero ===== */
 .hero {
   background: linear-gradient(90deg, var(--hero-inicio) 0%, var(--hero-fin) 80%);
   padding: 60px 40px;
@@ -182,7 +164,6 @@ body {
   flex: 1 1 320px;
 }
 
-/* Título/H1 — Fraunces 48px */
 .hero-copy h1 {
   font-family: var(--font-title);
   font-weight: 700;
@@ -196,7 +177,6 @@ body {
   color: var(--rosamedio);
 }
 
-/* Segunda línea — Fraunces 44px cursiva, en blanco */
 .hero-highlight {
   display: block;
   font-style: italic;
@@ -221,7 +201,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Botones */
 .btn {
   font-family: var(--font-body);
   font-weight: 600;
@@ -238,7 +217,6 @@ body {
   transition: background-color .2s ease, transform .15s ease;
 }
 
-/* "Ver categorías": efecto cristal */
 .btn-primary {
   background-color: rgba(255, 255, 255, 0.18);
   border-color: rgba(255, 255, 255, 0.6);
@@ -248,7 +226,6 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* "Pedir por WhatsApp": dorado con texto oscuro */
 .btn-whatsapp {
   background-color: var(--dorado);
   color: var(--letramenu);
@@ -258,7 +235,6 @@ body {
   filter: brightness(0.95);
 }
 
-/* Foto del Hero: esquinas redondeadas, leve inclinación y sombra dorada */
 .hero-visual {
   position: relative;
   width: 100%;
@@ -280,7 +256,6 @@ body {
   box-shadow: 16px 16px 0 var(--dorado);
 }
 
-/* ===== Categorías ===== */
 .categorias {
   background-color: var(--rosali);
   background-image: var(--tile-iconos);
@@ -299,7 +274,6 @@ body {
   padding-bottom: 20px;
 }
 
-/* Título/H2 — Fraunces 32px */
 .categorias__title {
   font-family: var(--font-title);
   font-weight: 600;
@@ -309,7 +283,6 @@ body {
   margin: 0 0 12px 0;
 }
 
-/* Escritorio: 3 tarjetas arriba y 2 centradas abajo */
 .categorias__grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -317,7 +290,7 @@ body {
 }
 
 .category-card {
-  min-width: 0; /* evita que las fotos ensanchen la tarjeta y se salga de la pantalla */
+  min-width: 0; 
   grid-column: span 2;
   background: var(--cremarosa);
   border: 2px solid var(--rosamedio);
@@ -354,14 +327,13 @@ body {
   width: 0;
   min-width: 0;
   height: 100%;
-  object-fit: contain; /* el producto se ve completo, sin recortes */
+  object-fit: contain; 
   padding: 4px;
   background: var(--blancopuro);
   border: 1.5px solid var(--rosaclaro);
   border-radius: 10px;
 }
 
-/* Título/H3 — Fraunces 20px */
 .category-card__title {
   font-family: var(--font-title);
   font-weight: 600;
@@ -389,7 +361,6 @@ body {
   margin-top: auto;
 }
 
-/* ===== TRUST BAR ===== */
 .trust-bar {
   display: flex;
   justify-content: space-around;
@@ -433,8 +404,6 @@ body {
   opacity: 0.8;
 }
 
-/* ===== NOSOTROS ===== */
-/* Fondo partido: izquierda doradopal, derecha rosapal. La foto cruza la unión. */
 .nosotros {
   background: linear-gradient(90deg, var(--doradopal) 50%, var(--rosapal) 50%);
   padding: 96px;
@@ -456,11 +425,11 @@ body {
 .nosotros__photo {
   display: block;
   width: 100%;
-  height: auto; /* la foto se ve completa, con su proporción original */
+  height: auto; 
   border: 10px solid var(--rosamedio);
   border-radius: 32px;
   box-shadow: 0 12px 32px rgba(26, 3, 67, 0.4);
-  background: var(--rosapal); /* color mientras no cargue la foto */
+  background: var(--rosapal); 
 }
 
 .nosotros__text {
@@ -485,7 +454,6 @@ body {
   margin: 0;
 }
 
-/* ===== FOOTER ===== */
 .footer {
   background: var(--letrah1);
 }
@@ -575,10 +543,7 @@ body {
   margin: 0;
 }
 
-/* ===== ADORNOS (pluma y colibrí) =====
-   Los archivos viven en img/decor/ (colibri y pluma, exportados de Figma). */
 
-/* Pluma dorada a la derecha del título de Categorías */
 .deco-pluma--titulo {
   display: block;
   height: 36px;
@@ -587,7 +552,7 @@ body {
   pointer-events: none;
 }
 
-/* Colibrí de Nosotros: en la esquina superior izquierda de la foto, casi tocándola */
+
 .deco-vuelo {
   position: absolute;
   top: -72px;
@@ -603,9 +568,8 @@ body {
   height: 100%;
   width: auto;
 }
-/* ===== RESPONSIVE ===== */
 
-/* Tablet grande y laptops pequeñas */
+
 @media (max-width: 1024px) {
   .categorias,
   .trust-bar {
@@ -629,13 +593,12 @@ body {
   }
 }
 
-/* Nosotros apilado: la foto queda a caballo entre dorado y rosa */
 @media (max-width: 900px) {
   .nosotros {
     background: var(--rosapal);
     position: relative;
     isolation: isolate;
-    padding-top: 100px; /* espacio para que el colibrí no se meta en la Trust Bar */
+    padding-top: 100px; 
   }
   .nosotros__inner {
     flex-direction: column;
@@ -668,7 +631,7 @@ body {
   }
 }
 
-/* Tablet */
+
 @media (max-width: 768px) {
   .hero {
     padding: 48px 24px;
@@ -714,7 +677,6 @@ body {
   }
 }
 
-/* Celular */
 @media (max-width: 480px) {
   .hero-title-1 {
     font-size: 40px;

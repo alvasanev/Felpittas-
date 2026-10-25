@@ -1,4 +1,4 @@
-// 1. Mensajes que se alternan en la barra superior
+
 const mensajes = [
   "Envíos a todo Colombia 💜",
   "Todo lo que necesitas para tu negocio 🧸"
@@ -10,7 +10,6 @@ setInterval(() => {
   document.getElementById("topbar-msg").textContent = mensajes[indice];
 }, 4000);
 
-// 2. Menu hamburguesa (mostrar/ocultar en movil)
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
@@ -18,9 +17,7 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// 3. Cerrar el menu movil al hacer clic en un enlace
-// (para que el menu no se quede abierto tapando la pantalla
-// despues de que la persona ya eligio a donde ir)
+
 const enlacesDelMenu = navLinks.querySelectorAll("a");
 
 enlacesDelMenu.forEach((enlace) => {
@@ -29,5 +26,4 @@ enlacesDelMenu.forEach((enlace) => {
   });
 });
 
-// 4. Año actual en el pie de página (se actualiza solo cada año)
 document.getElementById("anio").textContent = new Date().getFullYear();
